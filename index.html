@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <h2>Todo App</h2>
+            <div class="section1">
+                <div class="input">
+                    <input id="todoInput" class="form-control" type="text" placeholder="Add your new Todo">
+                </div>
+                <div class="buttons">
+                    <button id="addBtn" class="btn btn-danger"><i class="fas fa-plus"></i></button>
+                    <button id="editBtn" class="btn btn-danger"><i class="fas fa-pen"></i></button>
+                </div>
+            </div>
+            
+                <div class="list" id="list">
+                    <!-- <div class="list-info" id="list-info">
+                        <li id="li">Lorem ipsum dolor sit amet consectetur <div class="list-delete">
+                            <button id="deleteBtn" class="btn btn-danger deleteBtn"><i class="fas fa-trash"></i></button>
+                            </div> </li>
+                    </div> -->
+                </div>
+            
+            <div class="footer">
+                <div class="pending" id="pending">
+                    <p>You have <span>0</span> Pending tasks</p>
+                </div>
+                <div class="clear">
+                    <button id="clearBtn" class="btn btn-dark">Clear all</button>
+                </div>
+            </div>
+        </div>
+        <div class="alertDivMain">
+            <div id="alertDiv" class="alert alert-warning alert-dismissible fade show" role="alert">
+                This beta version of Todo App is developed by <strong><a href="https://www.linkedin.com/in/mostafa-akram-mohamed/" target="_blank">Mostafa Akram</a></strong>
+               <button id="alertBtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
