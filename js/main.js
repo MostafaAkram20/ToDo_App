@@ -1,5 +1,12 @@
 $('.container').animate({top:'15%'} , 1000)
+
+
 $('.alert').animate( {opacity: "1"}, 2000 )
+setTimeout(() => {
+    $('.alert').animate( {opacity: "0"}, 1000 , ()=>{
+        alertDiv.css('display', 'none');
+    });
+  }, 5000);
 
 let alertDiv = $('#alertDiv');
 $('#alertBtn').click(()=>{
@@ -8,18 +15,35 @@ $('#alertBtn').click(()=>{
     });
     
 })
-setTimeout(() => {
-    $('.alert').animate( {opacity: "0"}, 1000 , ()=>{
-        alertDiv.css('display', 'none');
-    });
-  }, 5000);
 
-var addBtn = document.getElementById('addBtn');
-var editBtn = document.getElementById('editBtn');
-var todoInput = document.getElementById('todoInput');
-var list = document.getElementById('list');
-var clearBtn = document.getElementById('clearBtn');
-var todoLists = [];
+
+let alertDiv2 = $('#alertDiv2');
+let alertBtn2 = $("#alertBtn2");
+alertDiv2.animate({opacity:'1'} , 1000);
+setTimeout(() => {
+    $('#alertDiv2').animate( {opacity: "0"}, 1000 , ()=>{
+        alertDiv2.css('display', 'none');
+    });
+  }, 10000);
+alertBtn2.click( ()=>{
+    alertDiv2.animate({opacity:'0'} , 1000 , ()=>{
+        alertDiv2.css('display', 'none');
+    })
+})
+
+let addBtn = document.getElementById('addBtn');
+let editBtn = document.getElementById('editBtn');
+let todoInput = document.getElementById('todoInput');
+let list = document.getElementById('list');
+let clearBtn = document.getElementById('clearBtn');
+// saving data to local storage
+let todoLists ;
+if(localStorage.getItem('lists') == null){
+    todoLists = [];
+}else{
+    todoLists = JSON.parse(localStorage.getItem('lists'));
+    showTodoLists();
+}
 
 
 todoInput.addEventListener('keyup' , ()=>{
@@ -44,6 +68,7 @@ function checkActivity(){
 addBtn.addEventListener('click', function () {
     if (todoInput.value.trim() !== "") {  
         todoLists.push(todoInput.value);
+        localStorage.setItem('lists' , JSON.stringify(todoLists));
         showTodoLists();
         showPendingTasks();
         checkActivity()
@@ -57,7 +82,7 @@ function showTodoLists() {
         todoDivs += `<div class="list-info">
         <li> <span>${i+1}.</span> ${todoLists[i]}
             <div class="list-delete">
-                <button class="deleteBtn btn btn-danger" data-index="${i}"><i class="fas fa-trash"></i></button>
+                <button class="deleteBtn btn btn-primary" data-index="${i}"><i class="fas fa-trash"></i></button>
             </div>
         </li>
     </div>`;
@@ -79,6 +104,7 @@ function showPendingTasks() {
 
 function deleteTask(index) {
     todoLists.splice(index, 1);
+    localStorage.setItem('lists', JSON.stringify(todoLists));
     showTodoLists();
     showPendingTasks();
     checkActivity()
@@ -86,6 +112,7 @@ function deleteTask(index) {
 
 clearBtn.addEventListener('click', function () {
     todoLists = [];
+    localStorage.setItem('lists', JSON.stringify(todoLists));
     showTodoLists();
     showPendingTasks();
     editBtn.classList.remove('active');
