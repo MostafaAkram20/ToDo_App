@@ -8,6 +8,12 @@ body {
     position: relative;
 }
 
+.linked {
+    position: absolute;
+    margin: 20px;
+    font-size: 40px;
+}
+
 span {
     color: #2a93e3;
 }
@@ -32,6 +38,7 @@ a {
 
     display: block;
 }
+
 #alertDiv2 {
     opacity: 0;
 }
@@ -121,6 +128,7 @@ h2 {
         justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
+
         button {
             opacity: 0.7;
             margin: 2px;
@@ -128,13 +136,13 @@ h2 {
             border-radius: 3px;
             transition: 0.3s;
         }
+
         button.active {
             opacity: 1;
             cursor: pointer;
         }
     }
 }
-
 
 li {
     position: relative;
@@ -173,7 +181,7 @@ li:hover {
         right: 0;
     }
 
-    
+
 }
 
 .footer {
@@ -216,10 +224,12 @@ li:hover {
 @media (max-width: 576px) {
     .container {
         width: 350px;
-        h2{
+
+        h2 {
             text-align: center;
             margin-bottom: 20px;
         }
+
         input {
             width: 100%;
             /* margin:10px; */
@@ -227,23 +237,27 @@ li:hover {
             text-align: center;
         }
     }
+
     .info {
         width: fit-content;
     }
-    .section1{
+
+    .section1 {
         flex-direction: column;
     }
-    .buttons{
+
+    .buttons {
         margin: 10px;
-        button{
-            
-                font-size: 18px;
-            
+
+        button {
+
+            font-size: 18px;
+
             width: 70px;
             text-align: center;
             align-content: center;
         }
-        
+
     }
-    
+
 }

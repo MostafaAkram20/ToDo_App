@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- first version -->
-
+<!-- Todo-list App -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +11,10 @@
 </head>
 
 <body>
-
-    <!-- From Uiverse.io by javierBarroso --> 
-
-  
     <div class="main">
-        
+        <div class="linked">
+            <a target="_blank" href="https://www.linkedin.com/in/mostafa-akram-mohamed/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
         <div class="container">
             <h2>Todo App</h2>
             <div class="section1">
@@ -25,11 +22,10 @@
                     <input id="todoInput" class="form-control" type="text" placeholder="Add your new Todo">
                 </div>
                 <div class="buttons">
-                    <button id="addBtn" class="btn btn-primary"><i class="fas fa-plus"></i></button>
-                    <button id="editBtn" class="btn btn-primary"><i class="fas fa-pen"></i></button>
+                    <button id="addBtn" class="btn btn-primary"><i class="fa-solid fa-plus"></i></button>
+                    <button id="editBtn" class="btn btn-primary"><i class="fa-solid fa-pen"></i></button>
                 </div>
             </div>
-
             <div class="list" id="list">
                 <!-- <div class="list-info" id="list-info">
                         <li id="li">Lorem ipsum dolor sit amet consectetur <div class="list-delete">
@@ -37,7 +33,6 @@
                             </div> </li>
                     </div> -->
             </div>
-
             <div class="footer">
                 <div class="pending" id="pending">
                     <p>You have <span>0</span> Pending tasks</p>
@@ -46,7 +41,6 @@
                     <button id="clearBtn" class="btn btn-outline-dark">Clear all</button>
                 </div>
             </div>
-            
         </div>
         <div id="alertDiv2" class="alertDiv2">
             <div class="info">
@@ -57,9 +51,7 @@
                 <div class="info__close"  id="alertBtn2"><svg  height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z" fill="#393a37"></path></svg></div>
             </div>
         </div>
-
         </div>
-        
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
