@@ -1,4 +1,3 @@
-
 $('.container').animate({top:'15%'} , 1000)
 $('.alert').animate( {opacity: "1"}, 2000 )
 
