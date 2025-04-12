@@ -121,8 +121,6 @@ h2 {
         justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
-
-
         button {
             opacity: 0.7;
             margin: 2px;
@@ -130,7 +128,6 @@ h2 {
             border-radius: 3px;
             transition: 0.3s;
         }
-
         button.active {
             opacity: 1;
             cursor: pointer;
@@ -181,8 +178,8 @@ li:hover {
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
-    /* gap: 100px; */
+    justify-content: center;
+    gap: 5px;
     align-items: center;
     flex-direction: row;
     margin-top: 15px;
@@ -222,11 +219,22 @@ li:hover {
 
         input {
             width: 200px;
+            margin-right:5px;
         }
     }
-
     .info {
         width: fit-content;
+    }
+    .buttons{
+        button{
+            
+                font-size: 13px;
+            
+            width: 40px;
+            text-align: center;
+            align-content: center;
+        }
+        
     }
     
 }
