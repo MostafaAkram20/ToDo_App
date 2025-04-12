@@ -240,6 +240,7 @@ li:hover {
 
     .info {
         width: fit-content;
+        bottom: 15%;
     }
 
     .section1 {
