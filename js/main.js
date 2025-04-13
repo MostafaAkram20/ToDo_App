@@ -43,6 +43,7 @@ if(localStorage.getItem('lists') == null){
 }else{
     todoLists = JSON.parse(localStorage.getItem('lists'));
     showTodoLists();
+    showPendingTasks();
 }
 
 
@@ -100,6 +101,7 @@ function showTodoLists() {
 
 function showPendingTasks() {
     document.getElementById('pending').innerHTML = `<p>You have <span> ${todoLists.length} </span> Pending tasks</p>`;
+    
 }
 
 function deleteTask(index) {
